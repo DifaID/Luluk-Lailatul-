@@ -544,51 +544,50 @@ musicControl.addEventListener("click",async()=>{
 });
 
 /* Coba beberapa format foto untuk menghindari masalah ekstensi */
-function loadPhotos(){
-  const grid=document.getElementById("photoGrid");
-  if(grid.dataset.loaded==="true")return;
-  grid.dataset.loaded="true";
 
-  const captions=[
+function loadPhotos() {
+  const grid = document.getElementById("photoGrid");
+  grid.innerHTML = "";
+
+  const captions = [
     "A lovely moment ♡",
     "Little things, big memories",
     "A day to remember",
     "Simply beautiful",
     "Keep this moment"
   ];
-  const extensions=["jpg","jpeg","png","webp","JPG","JPEG","PNG","WEBP"];
 
-  for(let i=1;i<=5;i++){
-    const figure=document.createElement("figure");
-    figure.className="photo-card";
-    figure.style.setProperty("--tilt",i%2?"-1deg":"1deg");
-    figure.style.animationDelay=(i*100)+"ms";
+  for (let i = 1; i <= 5; i++) {
+    const figure = document.createElement("figure");
+    figure.className = "photo-card";
+    figure.style.setProperty(
+      "--tilt",
+      i % 2 ? "-1deg" : "1deg"
+    );
 
-    const img=document.createElement("img");
-    img.alt="Kenangan "+i;
-    img.loading="lazy";
+    const img = document.createElement("img");
+    img.alt = "Kenangan " + i;
+    img.loading = "lazy";
 
-    const caption=document.createElement("figcaption");
-    caption.textContent=captions[i-1];
-    figure.append(img,caption);
+    const caption = document.createElement("figcaption");
+    caption.textContent = captions[i - 1];
 
-    let index=0;
-    function tryNext(){
-      if(index>=extensions.length){
-        figure.remove();
-        return;
-      }
-      img.src="foto"+i+"."+extensions[index++];
-    }
-    img.onerror=tryNext;
-    img.onload=()=>{
-      if(img.naturalWidth>0){
-        grid.appendChild(figure);
-      }else{
-        tryNext();
-      }
+    figure.appendChild(img);
+    figure.appendChild(caption);
+
+    // Tampilkan kartu lebih dahulu untuk memudahkan pemeriksaan
+    grid.appendChild(figure);
+
+    // Gunakan alamat relatif dari lokasi index.html
+    img.src = new URL(
+      `foto${i}.jpg`,
+      document.baseURI
+    ).href;
+
+    img.onerror = () => {
+      figure.remove();
+      console.warn("Foto tidak ditemukan:", img.src);
     };
-    tryNext();
   }
 }
 </script>
