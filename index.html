@@ -450,7 +450,7 @@ document.getElementById("openInvitation").addEventListener("click",async()=>{
   candlePage.classList.remove("hidden");
   window.scrollTo(0,0);
   musicControl.classList.add("visible");
-  music.volume=.48;
+  music.volume=0.55;
   try{await music.play()}catch(e){
     micStatus.textContent="Musik gagal diputar. Periksa nama file Luluk Laila.mp3.";
   }
