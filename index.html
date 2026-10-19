@@ -107,6 +107,15 @@ button{font:inherit;cursor:pointer}
   color:var(--gold);font:16px "Cormorant Garamond",serif;
   letter-spacing:2px;
 }
+
+/* Tambahan umur otomatis */
+.age{
+  color:var(--pink);
+  font:italic 14px "Cormorant Garamond",serif;
+  letter-spacing:1px;
+  margin-top:8px;
+}
+
 .open-btn,.secondary-btn{
   padding:14px 24px;border:1px solid var(--gold);
   background:linear-gradient(135deg,#c6a66e,#957444);
@@ -350,6 +359,7 @@ button{font:inherit;cursor:pointer}
     <div class="gold-rule"></div>
     <p class="note">Sebuah halaman kecil berisi doa, kenangan, dan harapan baik yang ingin kusampaikan untukmu.</p>
     <div class="date">22 · JANUARI · 2006</div>
+    <div class="age" id="ageDisplay"></div>
     <button class="open-btn" id="openInvitation">Buka Undangan ♡</button>
     <div class="cover-footer">made with love · especially for you</div>
   </main>
@@ -551,10 +561,10 @@ function loadPhotos() {
 
   const captions = [
     "A girl worth admiring ♡",
-  "Your smile, my favorite view",
-  "Beautiful in every way",
-  "Simply, wonderfully you",
-  "Someone special, always ♡"
+    "Your smile, my favorite view",
+    "Beautiful in every way",
+    "Simply, wonderfully you",
+    "Someone special, always ♡"
   ];
 
   for (let i = 1; i <= 5; i++) {
@@ -574,11 +584,8 @@ function loadPhotos() {
 
     figure.appendChild(img);
     figure.appendChild(caption);
-
-    // Tampilkan kartu lebih dahulu untuk memudahkan pemeriksaan
     grid.appendChild(figure);
 
-    // Gunakan alamat relatif dari lokasi index.html
     img.src = new URL(
       `foto${i}.jpg`,
       document.baseURI
@@ -590,6 +597,57 @@ function loadPhotos() {
     };
   }
 }
+
+/* Umur otomatis berdasarkan waktu WIB */
+function updateAge() {
+  const parts = new Intl.DateTimeFormat("en-GB", {
+    timeZone: "Asia/Jakarta",
+    year: "numeric",
+    month: "numeric",
+    day: "numeric",
+    hour: "numeric",
+    minute: "numeric",
+    hourCycle: "h23"
+  }).formatToParts(new Date());
+
+  const time = {};
+
+  parts.forEach(part => {
+    if (part.type !== "literal") {
+      time[part.type] = Number(part.value);
+    }
+  });
+
+  const birthYear = 2006;
+  const birthMonth = 1;
+  const birthDay = 22;
+
+  let age = time.year - birthYear;
+
+  const birthdayReached =
+    time.month > birthMonth ||
+    (
+      time.month === birthMonth &&
+      (
+        time.day > birthDay ||
+        (
+          time.day === birthDay &&
+          (time.hour > 0 ||
+           (time.hour === 0 && time.minute >= 1))
+        )
+      )
+    );
+
+  if (!birthdayReached) {
+    age--;
+  }
+
+  document.getElementById("ageDisplay").textContent =
+    age + " tahun ♡";
+}
+
+updateAge();
+setInterval(updateAge, 15000);
 </script>
 </body>
 </html>
