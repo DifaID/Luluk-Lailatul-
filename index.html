@@ -3,1432 +3,899 @@
 <html lang="id">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#f7f3eb">
-<title>A Special Invitation | Luluk</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#f7f2e9">
+<title>Untuk Luluk Lailatul Khoiriyah 🌹</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=DM+Sans:wght@300;400;500;600&family=Italianno&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@300;400;500&family=Great+Vibes&display=swap" rel="stylesheet">
 
 <style>
-:root {
-  --paper: #f7f3eb;
-  --paper-deep: #eee5d6;
-  --ink: #41473a;
-  --sage: #78836b;
-  --sage-light: #a8b09b;
-  --gold: #b69a68;
-  --gold-light: #d7c5a0;
-  --white: #fffdf8;
-  --muted: #8b8578;
-  --serif: "Cormorant Garamond", Georgia, serif;
-  --script: "Italianno", cursive;
-  --sans: "DM Sans", sans-serif;
+:root{
+  --ivory:#f8f4ec;
+  --paper:#fffdf8;
+  --gold:#b99a62;
+  --gold-light:#e1c995;
+  --sage:#758674;
+  --sage-dark:#45594a;
+  --ink:#554b40;
+  --muted:#918477;
+  --rose:#d8aaa2;
 }
-
-* { box-sizing: border-box; }
-
-html { scroll-behavior: smooth; }
-
-body {
-  margin: 0;
-  background: var(--paper);
-  color: var(--ink);
-  font-family: var(--sans);
-  font-weight: 300;
-  overflow-x: hidden;
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:var(--ivory);
+  color:var(--ink);
+  font-family:"DM Sans",sans-serif;
+  font-weight:300;
+  -webkit-tap-highlight-color:transparent;
 }
-
-button { font: inherit; }
-
-button:focus-visible {
-  outline: 2px solid var(--gold);
-  outline-offset: 4px;
+button{font:inherit}
+.hidden{display:none!important}
+.page{
+  min-height:100svh;
+  position:relative;
+  overflow:hidden;
 }
-
-button, a { -webkit-tap-highlight-color: transparent; }
-
-::selection {
-  background: var(--gold-light);
-  color: var(--ink);
+.paper-texture{
+  position:absolute;inset:0;pointer-events:none;z-index:0;
+  opacity:.23;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.13'/%3E%3C/svg%3E");
 }
-
-/* PAPER TEXTURE */
-
-.paper-texture {
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: 30;
-  opacity: .10;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.24'/%3E%3C/svg%3E");
+.gold-rule{
+  height:1px;
+  width:70px;
+  margin:17px auto;
+  background:linear-gradient(90deg,transparent,var(--gold),transparent);
 }
-
-/* BOTANICAL ORNAMENTS */
-
-.botanical {
-  position: absolute;
-  width: 115px;
-  height: 150px;
-  pointer-events: none;
-  opacity: .78;
+.eyebrow{
+  font-size:9px;
+  letter-spacing:4px;
+  text-transform:uppercase;
+  color:var(--sage);
 }
+.script{font-family:"Great Vibes",cursive}
+.serif{font-family:"Cormorant Garamond",serif}
 
-.botanical svg {
-  width: 100%;
-  height: 100%;
-  overflow: visible;
+/* Bunga SVG */
+.flower-art{
+  position:absolute;
+  width:170px;
+  height:205px;
+  pointer-events:none;
+  z-index:1;
+  opacity:.92;
 }
+.flower-art.top-left{top:-12px;left:-15px}
+.flower-art.top-right{top:-12px;right:-15px;transform:scaleX(-1)}
+.flower-art.bottom-left{bottom:-15px;left:-15px;transform:scaleY(-1)}
+.flower-art.bottom-right{bottom:-15px;right:-15px;transform:scale(-1)}
+.flower-art svg{width:100%;height:100%;overflow:visible}
+.flower-art .stem{fill:none;stroke:#7b9279;stroke-width:1.5;stroke-linecap:round}
+.flower-art .leaf{fill:#8fa08a;stroke:#6f876f;stroke-width:.6}
+.flower-art .leaf-light{fill:#b8c4ac;stroke:#84977d;stroke-width:.5}
+.flower-art .petal{fill:#fffdf7;stroke:#c6a66f;stroke-width:.75}
+.flower-art .petal-shadow{fill:#ead8ca;stroke:#c6a66f;stroke-width:.65}
+.flower-art .center{fill:#c7a66b}
+.flower-art .dot{fill:#dfc48d}
 
-.botanical path,
-.botanical ellipse {
-  fill: none;
-  stroke: var(--sage);
-  stroke-width: 1;
-}
-
-.botanical .flower {
-  stroke: var(--gold);
-  stroke-width: .8;
-}
-
-.botanical.top-left {
-  top: 0;
-  left: 0;
-}
-
-.botanical.top-right {
-  top: 0;
-  right: 0;
-  transform: scaleX(-1);
-}
-
-.botanical.bottom-left {
-  bottom: 0;
-  left: 0;
-  transform: scaleY(-1);
-}
-
-.botanical.bottom-right {
-  bottom: 0;
-  right: 0;
-  transform: scale(-1);
-}
-
-.gold-rule {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  margin: 22px auto;
-  color: var(--gold);
-}
-
-.gold-rule::before,
-.gold-rule::after {
-  content: "";
-  width: 48px;
-  height: 1px;
-  background: var(--gold-light);
-}
-
-.gold-rule span {
-  font-size: 13px;
-}
-
-/* INTRO COVER */
-
-#cover {
-  min-height: 100svh;
-  display: grid;
-  place-items: center;
-  padding: 25px 18px;
+/* Sampul */
+#cover{
+  min-height:100svh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:27px 17px;
   background:
-    radial-gradient(ellipse at 50% 40%, #fffdf8 0%, #f7f3eb 57%, #ece2d2 100%);
-}
-
-.invitation-card {
-  width: min(100%, 510px);
-  min-height: min(790px, calc(100svh - 50px));
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 65px 24px;
-  text-align: center;
-  border: 1px solid var(--gold-light);
-  outline: 1px solid #b69a6844;
-  outline-offset: 6px;
-  background: #fffdf84d;
-  animation: fadeUp 1.2s ease both;
-}
-
-.invitation-card::before,
-.invitation-card::after {
-  content: "✧";
-  position: absolute;
-  color: var(--gold);
-  font-size: 16px;
-  background: var(--paper);
-  padding: 4px 8px;
-}
-
-.invitation-card::before {
-  top: -12px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.invitation-card::after {
-  bottom: -12px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.cover-content {
-  width: 100%;
-  position: relative;
-  z-index: 2;
-}
-
-.cover-label {
-  font-size: 9px;
-  letter-spacing: 4px;
-  line-height: 2;
-  text-transform: uppercase;
-  color: var(--sage);
-}
-
-.cover-monogram {
-  width: 68px;
-  height: 68px;
-  border: 1px solid var(--gold);
-  border-radius: 50%;
-  margin: 30px auto 23px;
-  display: grid;
-  place-items: center;
-  color: var(--gold);
-  font: 43px var(--script);
-  position: relative;
-}
-
-.cover-monogram::before,
-.cover-monogram::after {
-  content: "";
-  position: absolute;
-  width: 5px;
-  height: 5px;
-  border: 1px solid var(--gold);
-  background: var(--paper);
-  transform: rotate(45deg);
-}
-
-.cover-monogram::before { top: -3px; }
-.cover-monogram::after { bottom: -3px; }
-
-.cover-script {
-  font: 36px var(--script);
-  color: var(--gold);
-  margin-bottom: 1px;
-}
-
-.cover-title {
-  font: 400 clamp(43px, 9vw, 66px)/.91 var(--serif);
-  margin: 0;
-  letter-spacing: -1px;
-}
-
-.cover-title em {
-  display: block;
-  font-weight: 400;
-  color: var(--sage);
-  font-style: italic;
-}
-
-.cover-subtitle {
-  color: var(--muted);
-  font-size: 10px;
-  line-height: 2;
-  letter-spacing: 1px;
-  max-width: 280px;
-  margin: 23px auto;
-}
-
-.cover-date {
-  font: 500 15px var(--serif);
-  letter-spacing: 3px;
-  color: var(--ink);
-}
-
-.cover-date span {
-  color: var(--gold);
-  padding: 0 6px;
-}
-
-.open-btn {
-  margin-top: 31px;
-  min-width: 205px;
-  padding: 15px 20px;
-  background: var(--sage);
-  color: white;
-  border: 1px solid var(--sage);
-  font-size: 9px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  cursor: pointer;
-  transition: .3s ease;
-}
-
-.open-btn:hover {
-  color: var(--sage);
-  background: transparent;
-}
-
-.open-btn:disabled {
-  opacity: .55;
-  cursor: wait;
-}
-
-.cover-footnote {
-  color: #a29a8b;
-  font-size: 9px;
-  letter-spacing: 1px;
-  margin-top: 17px;
-  line-height: 1.8;
-}
-
-#errorMessage {
-  color: #a35d53;
-  font-size: 11px;
-  line-height: 1.8;
-  max-width: 300px;
-  margin: 12px auto 0;
-}
-
-#cover .botanical { width: 105px; height: 140px; }
-
-/* PAGE ONE */
-
-#pageOne { display: none; }
-
-#pageOne.active {
-  display: block;
-  animation: fadeUp 1s ease both;
-}
-
-.nav {
-  height: 68px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 clamp(18px, 6vw, 80px);
-  border-bottom: 1px solid #b69a682c;
-}
-
-.nav-brand {
-  color: var(--sage);
-  font: 28px var(--script);
-}
-
-.music-btn {
-  border: 1px solid var(--gold-light);
-  background: transparent;
-  color: var(--sage);
-  padding: 10px 13px;
-  font-size: 9px;
-  letter-spacing: 1px;
-  cursor: pointer;
-}
-
-.music-btn span { color: var(--gold); }
-
-.event-hero {
-  min-height: 650px;
-  padding: 70px 20px 65px;
-  position: relative;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  text-align: center;
-  overflow: hidden;
-  background: linear-gradient(180deg, #f7f3eb, #f1e8d9);
-}
-
-.event-hero::before {
-  content: "";
-  position: absolute;
-  width: 350px;
-  height: 350px;
-  top: 100px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: #c7b28b;
-  filter: blur(125px);
-  opacity: .15;
-}
-
-.event-hero > * { position: relative; }
-
-.event-kicker {
-  font-size: 9px;
-  color: var(--sage);
-  letter-spacing: 4px;
-  text-transform: uppercase;
-}
-
-.event-title {
-  font: 300 clamp(49px, 10vw, 91px)/.86 var(--serif);
-  letter-spacing: -1px;
-  margin: 23px 0 12px;
-}
-
-.event-title em {
-  display: block;
-  color: var(--sage);
-  font-weight: 400;
-  font-style: italic;
-}
-
-.event-date {
-  font-size: 9px;
-  letter-spacing: 3px;
-  color: #918777;
-  margin-top: 17px;
-}
-
-.cake-stage {
-  width: min(100%, 350px);
-  height: 270px;
-  position: relative;
-  display: grid;
-  place-items: center;
-  margin: 16px auto 0;
-}
-
-.cake {
-  position: relative;
-  width: 210px;
-  height: 170px;
-  margin-top: 50px;
-  filter: drop-shadow(0 18px 17px #64543a20);
-}
-
-.plate {
-  position: absolute;
-  bottom: -4px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 250px;
-  height: 15px;
-  border-radius: 50%;
-  background: linear-gradient(#dfcda8, #a58c5f);
-}
-
-.cake-body {
-  position: absolute;
-  bottom: 4px;
-  width: 210px;
-  height: 70px;
-  border-radius: 8px 8px 15px 15px;
-  background: linear-gradient(90deg, #805c49, #d0a98b 25%, #f4ddbb 50%, #c39376 78%, #79513f);
-}
-
-.cake-body::after {
-  content: "";
-  position: absolute;
-  top: 14px;
-  width: 100%;
-  height: 3px;
-  background: #fff4dd99;
-}
-
-.icing {
-  position: absolute;
-  z-index: 2;
-  bottom: 63px;
-  width: 210px;
-  height: 37px;
-  border-radius: 50%;
-  border: 2px solid #fff0d7;
-  background: linear-gradient(#fff8e8, #e4c8a6);
-}
-
-.drips {
-  position: absolute;
-  z-index: 3;
-  top: 16px;
-  left: 18px;
-  width: 15px;
-  height: 25px;
-  background: #fff0d7;
-  border-radius: 0 0 9px 9px;
-  box-shadow: 34px 5px 0 -1px #fff0d7,
-    75px 0 0 -2px #fff0d7,
-    120px 6px 0 -1px #fff0d7,
-    158px 0 0 -2px #fff0d7;
-}
-
-.cake-line {
-  position: absolute;
-  z-index: 4;
-  left: 50%;
-  bottom: 29px;
-  transform: translateX(-50%);
-  width: 145px;
-  height: 24px;
-  border-top: 1px solid #fff1d9;
-  border-bottom: 1px solid #fff1d9;
-}
-
-.candle {
-  position: absolute;
-  z-index: 5;
-  bottom: 90px;
-  width: 8px;
-  height: 43px;
-  border-radius: 3px 3px 0 0;
-  background: repeating-linear-gradient(135deg, #fff6e2 0 5px, #c4a16c 5px 8px);
-}
-
-.flame {
-  position: absolute;
-  width: 12px;
-  height: 19px;
-  left: 50%;
-  top: -21px;
-  transform: translateX(-50%);
-  border-radius: 60% 40% 55% 45%;
-  background: radial-gradient(ellipse at 50% 70%, #fffbdc 0 18%, #ffca6b 45%, #df833b 80%);
-  box-shadow: 0 0 15px 5px #ffb64b55;
-  animation: flicker .8s ease-in-out infinite alternate;
-  transition: .3s;
-}
-
-.flame.off {
-  opacity: 0;
-  transform: translateX(-50%) scale(.1);
-}
-
-.smoke {
-  position: absolute;
-  left: 50%;
-  top: -26px;
-  height: 30px;
-  border-left: 2px solid #aaa49a;
-  border-radius: 50%;
-  opacity: 0;
-}
-
-.smoke.show { animation: smoke 1.4s ease-out forwards; }
-
-#blowStatus {
-  color: #8b8375;
-  font-size: 11px;
-  line-height: 2;
-  max-width: 300px;
-}
-
-#blowStatus strong { color: var(--sage); font-weight: 500; }
-
-.mic-status {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  margin-top: 13px;
-  color: var(--sage);
-  font-size: 9px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-}
-
-.mic-dot {
-  width: 6px;
-  height: 6px;
-  background: var(--sage);
-  border-radius: 50%;
-}
-
-/* PAGE TWO */
-
-#pageTwo {
-  display: none;
-  min-height: 100vh;
-  background: var(--paper);
-}
-
-#pageTwo.active {
-  display: block;
-  animation: pageReveal 1.2s cubic-bezier(.2,.7,.2,1) both;
-}
-
-.page-two-header {
-  text-align: center;
-  padding: 26px 20px 22px;
-  border-bottom: 1px solid #b69a683d;
-}
-
-.page-two-header .script {
-  color: var(--gold);
-  font: 34px var(--script);
-}
-
-.page-two-header p {
-  margin: 4px 0 0;
-  color: var(--sage);
-  font-size: 8px;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-}
-
-.editorial {
-  max-width: 950px;
-  margin: auto;
-  padding: 65px 24px 70px;
-  text-align: center;
-  position: relative;
-}
-
-.editorial::before,
-.editorial::after {
-  content: "✦";
-  position: absolute;
-  top: 60px;
-  color: var(--gold-light);
-  font-size: 15px;
-}
-
-.editorial::before { left: 20px; }
-.editorial::after { right: 20px; }
-
-.section-kicker {
-  color: var(--sage);
-  font-size: 9px;
-  letter-spacing: 4px;
-  text-transform: uppercase;
-}
-
-.editorial h2 {
-  font: 300 clamp(55px, 11vw, 105px)/.85 var(--serif);
-  margin: 25px 0 15px;
-  letter-spacing: -2px;
-}
-
-.editorial h2 em {
-  color: var(--sage);
-  display: block;
-  font-weight: 400;
-}
-
-.editorial-description {
-  color: #8a8070;
-  font-size: 10px;
-  line-height: 2;
-  letter-spacing: 1px;
-  margin: 25px auto 36px;
-}
-
-.cover-photo-frame {
-  position: relative;
-  width: min(100%, 570px);
-  margin: 0 auto;
-  padding: 9px;
-  border: 1px solid var(--gold-light);
-}
-
-.cover-photo-frame::before {
-  content: "";
-  position: absolute;
-  inset: 5px;
-  border: 1px solid #b69a684b;
-  pointer-events: none;
-  z-index: 1;
-}
-
-.cover-photo-frame img {
-  display: none;
-  width: 100%;
-  max-height: 570px;
-  object-fit: cover;
-}
-
-.cover-photo-frame img.loaded { display: block; }
-
-.cover-photo-caption {
-  color: var(--gold);
-  font: 25px var(--script);
-  margin-top: 19px;
-}
-
-.content-section {
-  border-top: 1px solid #b69a682c;
-  padding: 70px 22px;
-}
-
-.content-inner {
-  max-width: 920px;
-  margin: auto;
-}
-
-.section-heading {
-  text-align: center;
-  margin-bottom: 38px;
-}
-
-.section-heading .ornament {
-  font-size: 19px;
-  color: var(--gold);
-}
-
-.section-heading h2 {
-  font: 300 clamp(43px, 8vw, 73px)/.94 var(--serif);
-  margin: 14px 0 0;
-}
-
-.section-heading h2 em {
-  color: var(--sage);
-}
-
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(6, minmax(0, 1fr));
-  align-items: start;
-  gap: 17px;
-}
-
-.photo-card {
-  grid-column: span 2;
-  margin: 0;
-  padding: 7px 7px 14px;
-  background: var(--white);
-  border: 1px solid #d7c8ac;
-  box-shadow: 0 8px 22px #55462a0d;
-  min-width: 0;
-  animation: fadeUp .8s ease both;
-}
-
-.photo-card img {
-  display: block;
-  width: 100%;
-  height: 255px;
-  object-fit: cover;
-}
-
-.photo-card figcaption {
-  padding-top: 10px;
-  text-align: center;
-  font: 22px var(--script);
-  color: var(--sage);
-}
-
-.gallery:empty { display: none; }
-
-.letter-section {
-  border-top: 1px solid #b69a682c;
-  padding: 75px 22px 85px;
-}
-
-.letter {
-  max-width: 650px;
-  margin: auto;
-  text-align: center;
-}
-
-.letter-flower {
-  color: var(--gold);
-  font-size: 22px;
-}
-
-.letter h2 {
-  font: 300 clamp(49px, 9vw, 78px)/.9 var(--serif);
-  margin: 22px 0 35px;
-}
-
-.letter h2 em {
-  display: block;
-  color: var(--sage);
-}
-
-.letter-copy {
-  border-top: 1px solid #b69a6840;
-  border-bottom: 1px solid #b69a6840;
-  padding: 29px 8px;
-  text-align: left;
-}
-
-.letter-copy p {
-  color: #716a5d;
-  font-size: 12px;
-  line-height: 2.2;
-  margin: 0 0 19px;
-}
-
-.letter-copy p:last-child { margin-bottom: 0; }
-
-.signature {
-  margin-top: 27px;
-  font: 32px var(--script);
-  color: var(--gold);
-}
-
-.page-footer {
-  text-align: center;
-  border-top: 1px solid #b69a682c;
-  padding: 26px 15px;
-  color: #9b907d;
-  font-size: 8px;
-  letter-spacing: 2px;
-}
-
-.page-footer span { color: var(--gold); }
-
-#confetti {
-  position: fixed;
-  inset: 0;
-  z-index: 50;
-  overflow: hidden;
-  pointer-events: none;
-}
-
-.confetti-piece {
-  position: absolute;
-  top: -15px;
-  width: 6px;
-  height: 10px;
-  animation: fall 3.8s linear forwards;
-}
-
-@keyframes fadeUp {
-  from { opacity: 0; transform: translateY(17px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes pageReveal {
-  from { opacity: 0; transform: translateY(18px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes flicker {
-  from { transform: translateX(-50%) rotate(-5deg) scale(.94); }
-  to { transform: translateX(-50%) rotate(5deg) scale(1.06); }
-}
-
-@keyframes smoke {
-  0% { opacity: 0; transform: translate(-50%, 0) scale(.7); }
-  25% { opacity: .6; }
-  100% { opacity: 0; transform: translate(-80%, -35px) scale(2); }
-}
-
-@keyframes fall {
-  to {
-    transform: translate3d(var(--drift), 105vh, 0) rotate(720deg);
-    opacity: 0;
-  }
-}
-
-@media (max-width: 600px) {
-  #cover { padding: 20px 17px; }
-
-  .invitation-card {
-    min-height: min(740px, calc(100svh - 40px));
-    padding: 62px 21px;
-  }
-
-  #cover .botanical { width: 80px; height: 110px; }
-
-  .event-hero { min-height: 620px; padding-top: 58px; }
-  .cake-stage { transform: scale(.91); margin: 5px auto 0; }
-
-  .editorial { padding: 55px 20px 60px; }
-  .editorial::before { left: 5px; }
-  .editorial::after { right: 5px; }
-
-  .content-section { padding: 60px 17px; }
-  .gallery { gap: 10px; }
-
-  .photo-card { grid-column: span 3; padding: 5px 5px 10px; }
-  .photo-card img { height: 200px; }
-
-  .gallery .photo-card:only-child {
-    grid-column: 2 / span 4;
-  }
-
-  .gallery .photo-card:nth-child(3):last-child {
-    grid-column: span 6;
-    width: 66%;
-    justify-self: center;
-  }
-
-  .letter-section { padding: 60px 20px 70px; }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after {
-    animation-duration: .01ms !important;
-    animation-iteration-count: 1 !important;
-    scroll-behavior: auto !important;
-  }
+    radial-gradient(ellipse at 50% 42%,#fffdf8 0%,#f8f3e9 68%,#eee4d4 100%);
+}
+.cover-frame{
+  position:relative;
+  z-index:2;
+  width:min(100%,440px);
+  min-height:min(780px,calc(100svh - 54px));
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:76px 27px 68px;
+  border:1px solid #c6a66f;
+  outline:1px solid rgba(198,166,111,.45);
+  outline-offset:5px;
+  background:rgba(255,253,248,.57);
+  box-shadow:0 20px 65px rgba(92,72,44,.08);
+}
+.cover-frame:before,.cover-frame:after{
+  content:"";
+  position:absolute;
+  width:34px;height:34px;
+  border-color:#b99a62;
+  border-style:solid;
+  opacity:.8;
+}
+.cover-frame:before{
+  top:10px;left:10px;
+  border-width:1px 0 0 1px;
+}
+.cover-frame:after{
+  bottom:10px;right:10px;
+  border-width:0 1px 1px 0;
+}
+.cover-emblem{
+  width:80px;height:80px;
+  display:grid;place-items:center;
+  margin-bottom:9px;
+  border:1px solid rgba(185,154,98,.62);
+  border-radius:50%;
+  position:relative;
+}
+.cover-emblem:before{
+  content:"";
+  position:absolute;inset:5px;
+  border:1px solid rgba(185,154,98,.3);
+  border-radius:50%;
+}
+.cover-emblem svg{width:52px;height:52px}
+.cover-kicker{margin:8px 0 16px}
+.cover-title{
+  font-family:"Cormorant Garamond",serif;
+  font-size:clamp(38px,10vw,53px);
+  line-height:.98;
+  font-weight:500;
+  color:#796445;
+  margin:0;
+  letter-spacing:-.8px;
+}
+.cover-title span{display:block}
+.cover-subtitle{
+  font-family:"Great Vibes",cursive;
+  font-size:clamp(25px,7vw,34px);
+  color:var(--sage);
+  margin-top:13px;
+}
+.cover-note{
+  max-width:260px;
+  font-size:11px;
+  line-height:1.9;
+  color:#8d8171;
+  margin:15px 0 19px;
+}
+.date-seal{
+  display:flex;align-items:center;gap:12px;
+  color:#8b7655;
+  font-family:"Cormorant Garamond",serif;
+  font-size:16px;
+  letter-spacing:1.5px;
+}
+.date-seal:before,.date-seal:after{
+  content:"";height:1px;width:28px;background:var(--gold-light);
+}
+.open-button{
+  margin-top:28px;
+  min-width:190px;
+  padding:15px 25px;
+  border:1px solid #a98b58;
+  color:#fffdf7;
+  background:linear-gradient(135deg,#b9a071,#92784c);
+  letter-spacing:2px;
+  font-size:10px;
+  text-transform:uppercase;
+  box-shadow:0 8px 22px rgba(140,111,65,.19);
+  cursor:pointer;
+  transition:transform .25s,box-shadow .25s;
+}
+.open-button:active{transform:scale(.97)}
+.open-button:hover{box-shadow:0 10px 28px rgba(140,111,65,.3)}
+.cover-footer{
+  position:absolute;
+  bottom:28px;
+  font-size:8px;
+  letter-spacing:3px;
+  color:#a69a86;
+  text-transform:uppercase;
+}
+
+/* Halaman lilin */
+#candlePage{
+  min-height:100svh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:35px 20px;
+  background:
+    radial-gradient(ellipse at 50% 36%,#fffdf8 0%,#f7f0e5 72%,#eee3d2 100%);
+}
+.candle-card{
+  position:relative;z-index:2;
+  width:min(100%,420px);
+  padding:47px 23px 38px;
+  border:1px solid rgba(185,154,98,.6);
+  outline:1px solid rgba(185,154,98,.25);
+  outline-offset:5px;
+  background:rgba(255,253,248,.76);
+  text-align:center;
+}
+.candle-card h2{
+  font:500 clamp(34px,9vw,43px)/1.05 "Cormorant Garamond",serif;
+  color:#796445;margin:12px 0 7px;
+}
+.candle-card .intro{
+  font-size:11px;line-height:1.9;color:#928476;
+  max-width:280px;margin:0 auto;
+}
+.cake-scene{
+  position:relative;
+  width:270px;height:255px;
+  max-width:100%;
+  margin:23px auto 10px;
+}
+.cake-shadow{
+  position:absolute;
+  bottom:17px;left:30px;right:30px;
+  height:18px;border-radius:50%;
+  background:rgba(112,86,54,.12);filter:blur(8px);
+}
+.cake-plate{
+  position:absolute;bottom:23px;left:20px;right:20px;
+  height:16px;border-radius:50%;
+  background:linear-gradient(#fffdf7,#dfd2bc);
+  border:1px solid #d1b98e;
+  box-shadow:0 5px 8px #cbbba0;
+}
+.cake-bottom{
+  position:absolute;bottom:38px;left:43px;right:43px;
+  height:65px;border-radius:9px 9px 15px 15px;
+  background:linear-gradient(90deg,#d8b5a1,#f4dfc9 23%,#fff0dd 68%,#d6ad97);
+  border:1px solid #d5b59b;
+  box-shadow:inset 0 -9px 0 rgba(164,111,87,.1);
+}
+.cake-bottom:before{
+  content:"";
+  position:absolute;top:0;left:0;right:0;height:13px;
+  background:#fff5e8;border-radius:9px 9px 50% 50%;
+  border-bottom:1px solid #e6c9ac;
+}
+.cake-top{
+  position:absolute;bottom:91px;left:43px;right:43px;
+  height:43px;border-radius:50%;
+  background:linear-gradient(180deg,#fffaf0,#f1d9c5);
+  border:1px solid #d8b99c;
+}
+.cake-top:after{
+  content:"";position:absolute;
+  width:70%;height:12px;left:15%;top:8px;
+  border-radius:50%;
+  border-top:2px solid #dfbfa2;
+}
+.berry{
+  position:absolute;bottom:117px;width:12px;height:13px;
+  background:radial-gradient(circle at 30% 25%,#e6b2a4,#b86c68);
+  border-radius:50% 50% 45% 45%;
+}
+.berry.b1{left:100px;transform:rotate(-18deg)}
+.berry.b2{left:128px;bottom:121px}
+.berry.b3{left:151px;transform:rotate(18deg)}
+.cake-leaf{
+  position:absolute;bottom:125px;left:115px;
+  width:13px;height:7px;background:#81947a;
+  border-radius:100% 0 100% 0;transform:rotate(-20deg);
+}
+.candle{
+  position:absolute;bottom:127px;width:9px;height:43px;
+  border-radius:3px 3px 1px 1px;
+  background:repeating-linear-gradient(135deg,#fff8ed 0 5px,#d8bc8d 5px 8px);
+  border:1px solid #cfb28a;
+  transition:opacity .7s,transform .7s;
+}
+.candle.c1{left:91px;height:37px}
+.candle.c2{left:130px;height:49px}
+.candle.c3{left:169px;height:37px}
+.flame{
+  position:absolute;bottom:100%;left:50%;
+  width:13px;height:20px;
+  transform:translateX(-50%);
+  background:radial-gradient(ellipse at 50% 75%,#fff5b2 0%,#ffd46e 34%,#e89a4d 68%,transparent 73%);
+  border-radius:55% 45% 55% 45%;
+  filter:drop-shadow(0 0 5px #efc777);
+  transform-origin:50% 100%;
+  animation:flicker .7s infinite alternate ease-in-out;
+}
+.candle.off .flame{opacity:0;animation:none}
+.candle.off{opacity:.45;transform:translateY(4px)}
+@keyframes flicker{
+  from{transform:translateX(-50%) rotate(-5deg) scale(.95)}
+  to{transform:translateX(-50%) rotate(5deg) scale(1.08)}
+}
+.mic-status{
+  margin:12px auto 0;
+  color:var(--sage);
+  font-size:11px;
+  line-height:1.8;
+  max-width:290px;
+  min-height:39px;
+}
+.mic-icon{
+  width:38px;height:38px;border-radius:50%;
+  border:1px solid #d8c49c;
+  display:grid;place-items:center;
+  margin:17px auto 0;
+  color:#a98b58;
+}
+.mic-icon svg{width:17px;height:17px}
+.secondary-button{
+  border:1px solid #bda578;
+  background:transparent;
+  color:#8a744d;
+  padding:12px 20px;
+  margin-top:14px;
+  font-size:10px;
+  letter-spacing:1.4px;
+  text-transform:uppercase;
+  cursor:pointer;
+}
+.small-hint{font-size:9px;color:#a39888;margin-top:12px;line-height:1.7}
+
+/* Surat */
+#letterPage{
+  min-height:100svh;
+  padding:48px 18px 55px;
+  background:linear-gradient(150deg,#f9f5ed,#efe6d7);
+}
+.letter-wrap{
+  position:relative;z-index:2;
+  width:min(100%,520px);
+  margin:0 auto;
+  background:#fffdf8;
+  border:1px solid #d0b782;
+  padding:50px 25px 35px;
+  box-shadow:0 16px 55px rgba(98,77,46,.09);
+}
+.letter-wrap:before{
+  content:"";position:absolute;inset:7px;
+  border:1px solid rgba(190,159,102,.35);
+  pointer-events:none;
+}
+.letter-head{text-align:center;position:relative}
+.letter-head .tiny-flower{font-size:24px;color:var(--gold)}
+.letter-head h2{
+  font:500 clamp(35px,9vw,48px)/1.08 "Cormorant Garamond",serif;
+  color:#786447;margin:13px 0 7px;
+}
+.letter-head .name-script{
+  font:38px "Great Vibes",cursive;color:var(--sage);
+}
+.letter-body{
+  position:relative;
+  font-family:"Cormorant Garamond",serif;
+  font-size:20px;line-height:1.7;color:#6b6054;
+  margin-top:30px;
+}
+.letter-body p{margin:0 0 18px}
+.letter-body .salutation{font-size:22px;color:#8d7753}
+.letter-sign{
+  text-align:right;margin-top:28px;
+  font:29px "Great Vibes",cursive;color:var(--sage);
+}
+.memories{
+  position:relative;z-index:2;
+  width:min(100%,700px);
+  margin:44px auto 0;
+}
+.memories-title{text-align:center;margin-bottom:25px}
+.memories-title h3{
+  font:500 38px "Cormorant Garamond",serif;
+  color:#786447;margin:10px 0;
+}
+.photo-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:13px;
+}
+.photo-card{
+  padding:7px 7px 18px;
+  background:#fffdf8;
+  border:1px solid #e1d4bb;
+  box-shadow:0 7px 20px rgba(92,72,44,.07);
+  transform:rotate(var(--tilt,0deg));
+  animation:rise .8s both;
+}
+.photo-card img{
+  display:block;width:100%;aspect-ratio:4/5;
+  object-fit:cover;background:#eee4d5;
+}
+.photo-card figcaption{
+  font:italic 16px "Cormorant Garamond",serif;
+  color:#8b7b66;text-align:center;padding-top:11px;
+}
+@keyframes rise{
+  from{opacity:0;transform:translateY(16px) rotate(var(--tilt,0deg))}
+  to{opacity:1;transform:translateY(0) rotate(var(--tilt,0deg))}
+}
+.closing{
+  position:relative;z-index:2;
+  text-align:center;
+  padding:43px 10px 10px;
+  color:#8e806d;
+}
+.closing .script{font-size:39px;color:var(--sage)}
+.closing p{font-size:9px;letter-spacing:2px;line-height:2;text-transform:uppercase}
+.music-control{
+  position:fixed;right:15px;bottom:15px;z-index:10;
+  width:43px;height:43px;border-radius:50%;
+  border:1px solid #c7ad7c;
+  background:rgba(255,253,248,.94);
+  color:#94794e;display:none;place-items:center;
+  box-shadow:0 4px 15px #6e56301a;cursor:pointer;
+}
+.music-control.visible{display:grid}
+.music-control svg{width:18px;height:18px}
+@media(min-width:600px){
+  .flower-art{width:215px;height:255px}
+  .cover-frame{padding-left:45px;padding-right:45px}
+  .letter-wrap{padding:60px 48px 43px}
+  .photo-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+}
+@media(max-height:650px){
+  #cover{padding:20px 17px}
+  .cover-frame{min-height:580px;padding-top:42px;padding-bottom:48px}
+  .cover-emblem{width:62px;height:62px}
+  .cover-title{font-size:40px}
+  .cover-note{margin:9px 0 12px}
+  .open-button{margin-top:18px}
+  .cover-footer{bottom:18px}
+}
+@media(prefers-reduced-motion:reduce){
+  *,*:before,*:after{animation-duration:.01ms!important;scroll-behavior:auto!important}
 }
 </style>
 </head>
 
 <body>
-<div class="paper-texture"></div>
+<audio id="bgMusic" src="Luluk Laila.mp3" loop preload="auto"></audio>
 
-<!-- ORNAMEN FLORAL SVG -->
+<!-- Ornamen bunga vektor, dibuat langsung di HTML -->
 <template id="flowerTemplate">
-  <svg viewBox="0 0 120 160" aria-hidden="true">
-    <path d="M8 150 C35 120 12 87 48 49 C58 37 62 22 65 8"/>
-    <path d="M32 116 C15 114 9 101 12 88 C29 90 38 102 32 116Z"/>
-    <path d="M42 91 C60 88 69 74 66 61 C49 65 39 78 42 91Z"/>
-    <path d="M50 66 C35 64 29 51 34 40 C49 44 56 54 50 66Z"/>
-    <path d="M29 124 C45 126 56 136 55 147 C39 145 29 136 29 124Z"/>
-    <path class="flower" d="M65 8 C58 1 48 6 52 15 C41 16 43 27 53 28 C54 39 65 39 68 29 C79 31 83 21 74 15 C80 6 70 0 65 8Z"/>
-    <path class="flower" d="M64 14 C60 18 61 23 66 25 C71 22 70 17 64 14Z"/>
-    <path d="M16 149 C34 144 43 145 55 147"/>
-  </svg>
+<svg viewBox="0 0 180 210" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <path class="stem" d="M-8 174 C32 148 43 111 66 78 S104 35 130 9"/>
+  <path class="stem" d="M25 144 C49 147 68 160 82 185"/>
+  <path class="stem" d="M52 105 C28 94 18 78 17 61"/>
+  <path class="stem" d="M89 55 C111 62 131 80 140 99"/>
+  <path class="leaf" d="M25 134 C4 134 1 114 4 102 C24 105 33 118 25 134Z"/>
+  <path class="leaf-light" d="M42 115 C24 108 24 89 32 78 C49 88 53 103 42 115Z"/>
+  <path class="leaf" d="M55 95 C72 80 91 89 98 99 C82 112 66 108 55 95Z"/>
+  <path class="leaf-light" d="M76 70 C61 53 70 36 82 29 C93 45 89 61 76 70Z"/>
+  <path class="leaf" d="M89 47 C106 29 123 38 129 48 C114 61 99 58 89 47Z"/>
+  <path class="leaf-light" d="M62 154 C65 132 85 128 98 135 C90 155 76 161 62 154Z"/>
+  <path class="leaf" d="M78 169 C98 155 113 167 116 180 C97 189 84 182 78 169Z"/>
+  <g transform="translate(129 25)">
+    <ellipse class="petal-shadow" cx="0" cy="-14" rx="9" ry="14"/>
+    <ellipse class="petal" cx="12" cy="-7" rx="9" ry="14" transform="rotate(55 12 -7)"/>
+    <ellipse class="petal-shadow" cx="12" cy="7" rx="9" ry="13" transform="rotate(110 12 7)"/>
+    <ellipse class="petal" cx="0" cy="14" rx="9" ry="14"/>
+    <ellipse class="petal-shadow" cx="-12" cy="7" rx="9" ry="13" transform="rotate(70 -12 7)"/>
+    <ellipse class="petal" cx="-12" cy="-7" rx="9" ry="14" transform="rotate(-55 -12 -7)"/>
+    <ellipse class="petal" cx="0" cy="0" rx="10" ry="11"/>
+    <path d="M-4 3 C-5 -5 5 -8 7 -1 C8 5 1 8 -3 4" fill="none" stroke="#b99a62" stroke-width="1"/>
+    <circle class="center" cx="1" cy="0" r="2.2"/>
+  </g>
+  <g transform="translate(45 53) scale(.72)">
+    <ellipse class="petal" cx="0" cy="-13" rx="9" ry="13"/>
+    <ellipse class="petal-shadow" cx="12" cy="-5" rx="9" ry="13" transform="rotate(55 12 -5)"/>
+    <ellipse class="petal" cx="8" cy="10" rx="9" ry="13" transform="rotate(110 8 10)"/>
+    <ellipse class="petal-shadow" cx="-8" cy="10" rx="9" ry="13" transform="rotate(60 -8 10)"/>
+    <ellipse class="petal" cx="-12" cy="-5" rx="9" ry="13" transform="rotate(-55 -12 -5)"/>
+    <ellipse class="petal" cx="0" cy="0" rx="9" ry="10"/>
+    <circle class="center" r="2.5"/>
+  </g>
+  <g transform="translate(82 118) scale(.4)">
+    <ellipse class="petal-shadow" cx="0" cy="-13" rx="9" ry="13"/>
+    <ellipse class="petal" cx="12" cy="-5" rx="9" ry="13" transform="rotate(55 12 -5)"/>
+    <ellipse class="petal" cx="8" cy="10" rx="9" ry="13" transform="rotate(110 8 10)"/>
+    <ellipse class="petal-shadow" cx="-8" cy="10" rx="9" ry="13" transform="rotate(60 -8 10)"/>
+    <ellipse class="petal" cx="-12" cy="-5" rx="9" ry="13" transform="rotate(-55 -12 -5)"/>
+    <circle class="center" r="3"/>
+  </g>
+  <circle class="dot" cx="103" cy="78" r="1.7"/>
+  <circle class="dot" cx="111" cy="84" r="1.2"/>
+  <circle class="dot" cx="98" cy="87" r="1.3"/>
+</svg>
 </template>
 
 <!-- SAMPUL UNDANGAN -->
-<section id="cover">
-  <div class="invitation-card">
-    <div class="botanical top-left"></div>
-    <div class="botanical top-right"></div>
-    <div class="botanical bottom-left"></div>
-    <div class="botanical bottom-right"></div>
+<section id="cover" class="page">
+  <div class="paper-texture"></div>
+  <div class="flower-art top-left"></div>
+  <div class="flower-art top-right"></div>
+  <div class="flower-art bottom-left"></div>
+  <div class="flower-art bottom-right"></div>
 
-    <div class="cover-content">
-      <div class="cover-label">You are cordially invited to</div>
-
-      <div class="cover-monogram">L</div>
-
-      <div class="cover-script">A celebration of life</div>
-
-      <h1 class="cover-title">
-        Luluk Lailatul
-        <em>Khoiriyah</em>
-      </h1>
-
-      <div class="gold-rule"><span>✧</span></div>
-
-      <p class="cover-subtitle">
-        Dengan penuh kehangatan, sebuah perayaan kecil
-        dipersembahkan untuk hari yang istimewa.
-      </p>
-
-      <div class="cover-date">22 <span>·</span> JANUARI <span>·</span> 2006</div>
-
-      <button class="open-btn" id="openBtn">Buka Undangan ♡</button>
-
-      <div class="cover-footnote">
-        A little celebration made just for you<br>
-        Please allow microphone access for the candle moment
-      </div>
-
-      <div id="errorMessage" role="status" aria-live="polite"></div>
+  <main class="cover-frame">
+    <div class="cover-emblem">
+      <svg viewBox="0 0 60 60" fill="none" aria-hidden="true">
+        <path d="M30 47C19 37 12 27 17 19C22 11 30 19 30 25C30 16 40 11 44 20C48 28 38 39 30 47Z"
+          stroke="#b99a62" stroke-width="1.1"/>
+        <path d="M30 47C28 35 28 29 30 25M30 37C24 33 21 28 21 25M30 34C36 31 39 26 39 23"
+          stroke="#7d9178" stroke-width="1.1" stroke-linecap="round"/>
+        <path d="M23 31C17 28 16 23 17 20C23 21 26 26 23 31ZM35 31C41 28 42 24 41 21C35 22 32 27 35 31Z"
+          fill="#b9c6b1"/>
+        <circle cx="30" cy="47" r="1.6" fill="#b99a62"/>
+      </svg>
     </div>
-  </div>
-</section>
 
-<!-- ACARA ULANG TAHUN -->
-<main id="pageOne">
-  <header class="nav">
-    <div class="nav-brand">Luluk ♡</div>
-    <button class="music-btn" id="musicBtn">♫ <span id="musicLabel">Musik aktif</span></button>
-  </header>
+    <div class="eyebrow cover-kicker">A special day for someone special</div>
+    <div class="gold-rule"></div>
 
-  <section class="event-hero">
-    <div class="botanical top-left"></div>
-    <div class="botanical top-right"></div>
-
-    <div class="event-kicker">A day to celebrate you</div>
-
-    <h1 class="event-title">
-      Happy Birthday
-      <em>Luluk.</em>
+    <h1 class="cover-title">
+      <span>Luluk</span>
+      <span>Lailatul</span>
+      <span>Khoiriyah</span>
     </h1>
 
-    <div class="event-date">22 JANUARI · BIRTHDAY EDITION</div>
+    <div class="cover-subtitle">a little celebration of you</div>
+    <div class="gold-rule"></div>
 
-    <div class="gold-rule"><span>❀</span></div>
+    <p class="cover-note">
+      Sebuah halaman kecil berisi doa, kenangan,
+      dan harapan baik yang ingin kusampaikan untukmu.
+    </p>
 
-    <div class="cake-stage">
-      <div class="cake">
-        <div class="plate"></div>
-        <div class="cake-body"></div>
-        <div class="icing"><div class="drips"></div></div>
-        <div class="cake-line"></div>
+    <div class="date-seal">22 · JANUARI · 2006</div>
 
-        <div class="candle" style="left:35%">
-          <div class="flame"></div><div class="smoke"></div>
-        </div>
-        <div class="candle" style="left:50%;height:52px">
-          <div class="flame"></div><div class="smoke"></div>
-        </div>
-        <div class="candle" style="left:65%">
-          <div class="flame"></div><div class="smoke"></div>
-        </div>
-      </div>
+    <button class="open-button" id="openInvitation">
+      Buka Undangan <span aria-hidden="true">♡</span>
+    </button>
+
+    <div class="cover-footer">made with love · especially for you</div>
+  </main>
+</section>
+
+<!-- TIUP LILIN -->
+<section id="candlePage" class="page hidden">
+  <div class="paper-texture"></div>
+  <div class="flower-art top-left"></div>
+  <div class="flower-art top-right"></div>
+  <div class="flower-art bottom-left"></div>
+  <div class="flower-art bottom-right"></div>
+
+  <main class="candle-card">
+    <div class="eyebrow">Make a wish</div>
+    <div class="gold-rule"></div>
+    <h2>A little birthday wish</h2>
+    <p class="intro">
+      Sebelum membaca surat kecil ini, pejamkan mata sebentar,
+      buat satu harapan, lalu tiup lilinnya. 🌷
+    </p>
+
+    <div class="cake-scene" aria-label="Kue ulang tahun dengan tiga lilin menyala">
+      <div class="cake-shadow"></div>
+      <div class="cake-plate"></div>
+      <div class="cake-bottom"></div>
+      <div class="cake-top"></div>
+      <div class="berry b1"></div>
+      <div class="berry b2"></div>
+      <div class="berry b3"></div>
+      <div class="cake-leaf"></div>
+      <div class="candle c1"><div class="flame"></div></div>
+      <div class="candle c2"><div class="flame"></div></div>
+      <div class="candle c3"><div class="flame"></div></div>
     </div>
 
-    <div id="blowStatus">
-      Sebelum melanjutkan cerita ini,<br>
-      <strong>buatlah satu harapan dan tiup lilinnya.</strong>
+    <div class="mic-icon" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+        <rect x="9" y="3" width="6" height="12" rx="3"/>
+        <path d="M5 11v1a7 7 0 0 0 14 0v-1M12 19v3M9 22h6"/>
+      </svg>
     </div>
-
-    <div class="mic-status">
-      <span class="mic-dot"></span>
-      <span id="micLabel">Mikrofon siap</span>
+    <p class="mic-status" id="micStatus">
+      Tekan tombol di bawah, izinkan akses mikrofon, lalu tiup ke arah ponselmu.
+    </p>
+    <button class="secondary-button" id="blowButton">Aktifkan Mikrofon</button>
+    <div>
+      <button class="secondary-button hidden" id="manualBlow">Padamkan Lilin</button>
     </div>
-  </section>
-</main>
+    <p class="small-hint">
+      Jika mikrofon tidak tersedia, kamu tetap bisa memadamkan lilin lewat tombol.
+      Gunakan HTTPS agar akses mikrofon berfungsi.
+    </p>
+  </main>
+</section>
 
-<!-- HALAMAN KENANGAN -->
-<section id="pageTwo">
-  <header class="page-two-header">
-    <div class="script">A special day for</div>
-    <p>Luluk Lailatul Khoiriyah · 22 January</p>
-  </header>
+<!-- HALAMAN SURAT DAN KENANGAN -->
+<section id="letterPage" class="page hidden">
+  <div class="paper-texture"></div>
+  <div class="flower-art top-left"></div>
+  <div class="flower-art top-right"></div>
+  <div class="flower-art bottom-left"></div>
+  <div class="flower-art bottom-right"></div>
 
-  <section class="editorial">
-    <div class="botanical top-left"></div>
-    <div class="botanical top-right"></div>
+  <article class="letter-wrap">
+    <header class="letter-head">
+      <div class="tiny-flower">❀</div>
+      <div class="eyebrow">A letter from the heart</div>
+      <h2>Untuk seseorang<br>yang istimewa</h2>
+      <div class="name-script">Luluk Lailatul Khoiriyah</div>
+      <div class="gold-rule"></div>
+    </header>
 
-    <div class="section-kicker">A new chapter begins</div>
-
-    <h2>
-      The beauty of
-      <em>being you.</em>
-    </h2>
-
-    <div class="editorial-description">
-      A collection of little moments, warm wishes,<br>
-      and beautiful things yet to come.
+    <div class="letter-body">
+      <p class="salutation">Untuk Luluk,</p>
+      <p>
+        Selamat ulang tahun. 🤍
+      </p>
+      <p>
+        Semoga di setiap langkahmu selalu ada alasan untuk tersenyum,
+        orang-orang baik yang menemani, dan banyak hal indah yang datang
+        tanpa harus kamu minta.
+      </p>
+      <p>
+        Semoga segala doa yang kamu simpan diam-diam menemukan jalannya,
+        semoga hatimu selalu diberi ketenangan, dan semoga kamu tumbuh
+        menjadi versi dirimu yang paling bahagia.
+      </p>
+      <p>
+        Terima kasih sudah menjadi seseorang yang begitu istimewa.
+        Hari ini, semoga dunia terasa sedikit lebih hangat untukmu.
+      </p>
+      <p>
+        Tetap jaga senyummu, tetap jadi dirimu sendiri, dan jangan lupa
+        bahwa kamu pantas mendapatkan banyak hal baik dalam hidup.
+      </p>
+      <p>
+        Selamat bertambah usia. Semoga bahagia selalu menyertaimu,
+        hari ini dan di hari-hari yang akan datang.
+      </p>
+      <div class="letter-sign">Dengan doa terbaik ♡</div>
     </div>
+  </article>
 
-    <div class="cover-photo-frame" id="coverPhotoFrame">
-      <img id="coverPhoto" src="foto1.jpg" alt="Foto Luluk">
-    </div>
-
-    <div class="cover-photo-caption">A little piece of your story ♡</div>
-  </section>
-
-  <section class="content-section">
-    <div class="content-inner">
-      <div class="section-heading">
-        <div class="ornament">❦</div>
-        <div class="section-kicker">Memories to keep</div>
-        <h2>Little moments,<br><em>lasting memories.</em></h2>
-      </div>
-
-      <div class="gallery" id="gallery">
-        <figure class="photo-card">
-          <img src="foto1.jpg" alt="Kenangan pertama" loading="lazy">
-          <figcaption>A lovely moment</figcaption>
-        </figure>
-        <figure class="photo-card">
-          <img src="foto2.jpg" alt="Kenangan kedua" loading="lazy">
-          <figcaption>Simply beautiful</figcaption>
-        </figure>
-        <figure class="photo-card">
-          <img src="foto3.jpg" alt="Kenangan ketiga" loading="lazy">
-          <figcaption>A little memory</figcaption>
-        </figure>
-        <figure class="photo-card">
-          <img src="foto4.jpg" alt="Kenangan keempat" loading="lazy">
-          <figcaption>Worth remembering</figcaption>
-        </figure>
-        <figure class="photo-card">
-          <img src="foto5.jpg" alt="Kenangan kelima" loading="lazy">
-          <figcaption>Your own story</figcaption>
-        </figure>
-      </div>
-    </div>
-  </section>
-
-  <section class="letter-section">
-    <div class="letter">
-      <div class="letter-flower">❦</div>
-      <div class="section-kicker">A letter from the heart</div>
-
-      <h2 class="letter">
-        Dear,
-        <em>Luluk.</em>
-      </h2>
-
-      <div class="letter-copy">
-        <p>Selamat ulang tahun, Luluk Lailatul Khoiriyah. ♡</p>
-
-        <p>
-          Semoga di usia yang baru ini, setiap langkahmu membawa
-          cerita baik, setiap doa yang kamu panjatkan menemukan jalannya,
-          dan setiap impian yang kamu jaga perlahan menjadi kenyataan.
-        </p>
-
-        <p>
-          Semoga kamu selalu memiliki alasan untuk tersenyum,
-          keberanian untuk mencoba hal-hal baru, serta hati yang tenang
-          ketika hidup tidak berjalan sesuai rencana.
-        </p>
-
-        <p>
-          Semoga orang-orang yang hadir dalam hidupmu membawa ketulusan,
-          hari-harimu dipenuhi hal-hal sederhana yang membahagiakan,
-          dan masa depan menyimpan banyak kejutan indah untukmu.
-        </p>
-
-        <p>
-          Bertumbuhlah dengan caramu sendiri. Tidak perlu terburu-buru,
-          tidak perlu menjadi orang lain. Semoga perjalananmu ke depan
-          dipenuhi kesehatan, kebahagiaan, dan kesempatan untuk meraih
-          semua yang kamu impikan.
-        </p>
-
-        <p>
-          Hari ini adalah satu halaman baru dalam ceritamu.
-          Semoga halaman-halaman berikutnya jauh lebih indah.
-        </p>
-      </div>
-
-      <div class="signature">With love & warm wishes ♡</div>
-    </div>
+  <section class="memories" id="memories">
+    <header class="memories-title">
+      <div class="eyebrow">Little moments, lovely memories</div>
+      <h3>Potongan Kenangan</h3>
+      <div class="gold-rule"></div>
+      <p style="font-size:11px;color:#918477;line-height:1.8">
+        Beberapa momen yang layak disimpan lebih lama.
+      </p>
+    </header>
+    <div class="photo-grid" id="photoGrid"></div>
   </section>
 
-  <footer class="page-footer">
-    A LITTLE CELEBRATION, MADE WITH <span>♡</span>
+  <footer class="closing">
+    <div class="script">with love, always</div>
+    <p>made especially for Luluk<br>♡ · 22 January · ♡</p>
   </footer>
 </section>
 
-<div id="confetti"></div>
-<audio id="music" src="Luluk%20Laila.mp3" preload="auto" loop></audio>
+<button class="music-control" id="musicControl" aria-label="Jeda atau putar musik" title="Musik">
+  <svg id="musicIcon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+    <path d="M9 18V5l12-2v13"/>
+    <circle cx="6" cy="18" r="3"/>
+    <circle cx="18" cy="16" r="3"/>
+  </svg>
+</button>
 
 <script>
-(() => {
-  "use strict";
+/* Pasang bunga vektor pada setiap sudut */
+const flowerSVG = document.getElementById("flowerTemplate").innerHTML;
+document.querySelectorAll(".flower-art").forEach(el => {
+  el.innerHTML = flowerSVG;
+});
 
-  const $ = selector => document.querySelector(selector);
+const cover = document.getElementById("cover");
+const candlePage = document.getElementById("candlePage");
+const letterPage = document.getElementById("letterPage");
+const music = document.getElementById("bgMusic");
+const openButton = document.getElementById("openInvitation");
+const blowButton = document.getElementById("blowButton");
+const manualBlow = document.getElementById("manualBlow");
+const micStatus = document.getElementById("micStatus");
+const musicControl = document.getElementById("musicControl");
 
-  const cover = $("#cover");
-  const pageOne = $("#pageOne");
-  const pageTwo = $("#pageTwo");
-  const openBtn = $("#openBtn");
-  const errorMessage = $("#errorMessage");
-  const music = $("#music");
-  const musicBtn = $("#musicBtn");
-  const musicLabel = $("#musicLabel");
-  const blowStatus = $("#blowStatus");
-  const micLabel = $("#micLabel");
+let audioContext = null;
+let micStream = null;
+let analyser = null;
+let micSource = null;
+let monitorFrame = null;
+let blowingSince = 0;
+let candlesOut = false;
+let micStarted = false;
 
-  let audioContext = null;
-  let analyser = null;
-  let micStream = null;
-  let raf = null;
-  let blown = false;
-  let blowStarted = 0;
-  let baselineTotal = 0;
-  let baselineSamples = 0;
+/* Musik dimulai setelah interaksi pengguna */
+openButton.addEventListener("click", async () => {
+  cover.classList.add("hidden");
+  candlePage.classList.remove("hidden");
+  window.scrollTo({top:0,behavior:"instant"});
 
-  // Pasang ornamen bunga di seluruh sudut yang sudah disediakan.
-  function addBotanicalOrnaments() {
-    const template = $("#flowerTemplate");
-
-    document.querySelectorAll(".botanical").forEach(node => {
-      node.appendChild(template.content.cloneNode(true));
-    });
+  musicControl.classList.add("visible");
+  music.volume = 0.48;
+  try {
+    await music.play();
+  } catch (err) {
+    micStatus.textContent =
+      "Musik belum bisa diputar. Periksa file Luluk Laila.mp3 di repositori.";
   }
 
-  // Hapus foto yang tidak tersedia. Foto dapat dipilih secara bebas.
-  function setupPhotos() {
-    const gallery = $("#gallery");
-    const cards = [...gallery.querySelectorAll(".photo-card")];
-    const images = cards.map(card => card.querySelector("img"));
+  startMicrophone();
+});
 
-    images.forEach(img => {
-      img.addEventListener("error", () => {
-        img.closest(".photo-card")?.remove();
-        arrangeGallery();
-        updateCoverPhoto();
-      });
+/* Aktifkan mikrofon untuk mendeteksi suara tiupan */
+async function startMicrophone() {
+  if (micStarted) return;
 
-      img.addEventListener("load", () => {
-        arrangeGallery();
-        updateCoverPhoto();
-      });
+  if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) {
+    micStatus.textContent =
+      "Browser ini tidak mendukung akses mikrofon. Kamu bisa memakai tombol Padamkan Lilin.";
+    manualBlow.classList.remove("hidden");
+    blowButton.textContent = "Mikrofon tidak tersedia";
+    return;
+  }
 
-      if (img.complete && img.naturalWidth === 0) {
-        img.closest(".photo-card")?.remove();
+  try {
+    micStatus.textContent = "Meminta izin mikrofon...";
+    micStream = await navigator.mediaDevices.getUserMedia({
+      audio: {
+        echoCancellation: false,
+        noiseSuppression: false,
+        autoGainControl: false
       }
     });
 
-    arrangeGallery();
-    updateCoverPhoto();
+    const AudioCtx = window.AudioContext || window.webkitAudioContext;
+    if (!AudioCtx) throw new Error("AudioContext tidak tersedia");
+
+    audioContext = new AudioCtx();
+    if (audioContext.state === "suspended") await audioContext.resume();
+
+    micSource = audioContext.createMediaStreamSource(micStream);
+    analyser = audioContext.createAnalyser();
+    analyser.fftSize = 2048;
+    analyser.smoothingTimeConstant = 0.15;
+    micSource.connect(analyser);
+
+    micStarted = true;
+    blowButton.textContent = "Mikrofon Aktif";
+    micStatus.textContent =
+      "Mikrofon aktif. Dekatkan ponsel, lalu tiup dengan cukup kuat! 🌬️";
+    manualBlow.classList.remove("hidden");
+    monitorMicrophone();
+  } catch (err) {
+    micStatus.textContent =
+      "Akses mikrofon gagal atau ditolak. Izinkan mikrofon di pengaturan browser, atau gunakan tombol di bawah.";
+    blowButton.textContent = "Coba Aktifkan Lagi";
+    manualBlow.classList.remove("hidden");
   }
+}
 
-  function arrangeGallery() {
-    const gallery = $("#gallery");
-    const cards = [...gallery.querySelectorAll(".photo-card")];
-    const count = cards.length;
+function monitorMicrophone() {
+  if (!analyser || candlesOut) return;
 
-    gallery.style.display = count ? "grid" : "none";
+  const data = new Uint8Array(analyser.fftSize);
 
-    cards.forEach(card => {
-      card.style.gridColumn = "";
-      card.style.width = "";
-      card.style.justifySelf = "";
-      card.style.marginTop = "";
-    });
+  function checkSound() {
+    if (!analyser || candlesOut) return;
 
-    if (count === 1) {
-      cards[0].style.gridColumn = "2 / span 4";
-    } else if (count === 2) {
-      cards.forEach(card => card.style.gridColumn = "span 3");
-    } else if (count === 3) {
-      cards.forEach(card => card.style.gridColumn = "span 2");
-    } else if (count >= 4) {
-      cards.forEach((card, index) => {
-        card.style.gridColumn = index < 2 ? "span 3" : "span 2";
-      });
+    analyser.getByteTimeDomainData(data);
+    let sum = 0;
+
+    for (let i = 0; i < data.length; i++) {
+      const normalized = (data[i] - 128) / 128;
+      sum += normalized * normalized;
     }
-  }
 
-  function updateCoverPhoto() {
-    const coverPhoto = $("#coverPhoto");
-    const frame = $("#coverPhotoFrame");
-    const available = [...$("#gallery").querySelectorAll(".photo-card img")]
-      .find(img => img.complete && img.naturalWidth > 0);
+    const rms = Math.sqrt(sum / data.length);
+    const threshold = 0.105;
 
-    if (available) {
-      if (coverPhoto.src !== available.src) {
-        coverPhoto.src = available.src;
+    if (rms > threshold) {
+      if (!blowingSince) blowingSince = performance.now();
+
+      const duration = performance.now() - blowingSince;
+      if (duration > 450) {
+        extinguishCandles();
+        return;
       }
-      coverPhoto.style.display = "block";
-      frame.style.display = "block";
+      micStatus.textContent = "Tiupan terdeteksi... terus tiup sedikit lagi! 🌬️";
     } else {
-      coverPhoto.style.display = "none";
-      frame.style.display = "none";
+      blowingSince = 0;
     }
+
+    monitorFrame = requestAnimationFrame(checkSound);
   }
 
-  async function openInvitation() {
-    openBtn.disabled = true;
-    openBtn.textContent = "Membuka undangan...";
-    errorMessage.textContent = "";
+  monitorFrame = requestAnimationFrame(checkSound);
+}
 
+blowButton.addEventListener("click", () => {
+  if (!micStarted) startMicrophone();
+});
+
+manualBlow.addEventListener("click", extinguishCandles);
+
+function extinguishCandles() {
+  if (candlesOut) return;
+  candlesOut = true;
+
+  if (monitorFrame) cancelAnimationFrame(monitorFrame);
+
+  document.querySelectorAll(".candle").forEach((candle, i) => {
+    setTimeout(() => candle.classList.add("off"), i * 180);
+  });
+
+  micStatus.textContent = "Harapan terbaik sudah kamu titipkan. ✨";
+  blowButton.classList.add("hidden");
+  manualBlow.classList.add("hidden");
+
+  if (micStream) {
+    micStream.getTracks().forEach(track => track.stop());
+  }
+  if (audioContext && audioContext.state !== "closed") {
+    audioContext.close().catch(() => {});
+  }
+
+  setTimeout(() => {
+    candlePage.classList.add("hidden");
+    letterPage.classList.remove("hidden");
+    window.scrollTo({top:0,behavior:"smooth"});
+    loadPhotos();
+  }, 1900);
+}
+
+/* Musik dapat dijeda dan diputar kembali */
+musicControl.addEventListener("click", async () => {
+  if (music.paused) {
     try {
-      if (!navigator.mediaDevices?.getUserMedia) {
-        throw new Error(
-          "Mikrofon memerlukan browser modern dan website HTTPS. Buka melalui GitHub Pages."
-        );
-      }
-
-      micStream = await navigator.mediaDevices.getUserMedia({
-        audio: {
-          echoCancellation: false,
-          noiseSuppression: false,
-          autoGainControl: false
-        }
-      });
-
-      const AudioCtx = window.AudioContext || window.webkitAudioContext;
-      audioContext = new AudioCtx();
-      await audioContext.resume();
-
-      const source = audioContext.createMediaStreamSource(micStream);
-      analyser = audioContext.createAnalyser();
-      analyser.fftSize = 2048;
-      analyser.smoothingTimeConstant = .25;
-      source.connect(analyser);
-
-      cover.style.display = "none";
-      pageOne.classList.add("active");
-
-      addBotanicalOrnaments();
-      setupPhotos();
-
-      music.volume = .4;
-      try {
-        await music.play();
-        musicLabel.textContent = "Musik aktif";
-      } catch {
-        musicLabel.textContent = "Putar musik";
-      }
-
-      micLabel.textContent = "Mikrofon aktif";
-      blowStatus.innerHTML =
-        'Buat satu harapan, lalu tiup ke arah mikrofon HP.<br><strong>Lilin akan padam secara otomatis.</strong>';
-
-      detectBlow();
-    } catch (error) {
-      openBtn.disabled = false;
-      openBtn.textContent = "Coba buka lagi ♡";
-
-      if (error.name === "NotAllowedError" ||
-          error.name === "PermissionDeniedError") {
-        errorMessage.textContent =
-          "Izin mikrofon belum diberikan. Izinkan akses mikrofon pada pengaturan situs, lalu coba lagi.";
-      } else if (error.name === "NotFoundError") {
-        errorMessage.textContent = "Mikrofon tidak ditemukan pada perangkat ini.";
-      } else {
-        errorMessage.textContent =
-          error.message || "Undangan tidak dapat dibuka. Silakan coba lagi.";
-      }
+      await music.play();
+    } catch (err) {
+      alert("Musik belum bisa diputar. Periksa file Luluk Laila.mp3.");
     }
+  } else {
+    music.pause();
   }
+});
 
-  function detectBlow() {
-    if (!analyser || blown) return;
+/* Foto yang tidak ada atau gagal dimuat otomatis dilewati */
+function loadPhotos() {
+  const grid = document.getElementById("photoGrid");
+  if (grid.dataset.loaded === "true") return;
+  grid.dataset.loaded = "true";
 
-    const timeData = new Uint8Array(analyser.fftSize);
-    const freqData = new Uint8Array(analyser.frequencyBinCount);
-    const binWidth = audioContext.sampleRate / analyser.fftSize;
+  const captions = [
+    "A lovely moment ♡",
+    "Little things, big memories",
+    "A day to remember",
+    "Simply beautiful",
+    "Keep this moment"
+  ];
 
-    function inspect() {
-      if (!analyser || blown) return;
+  for (let i = 1; i <= 5; i++) {
+    const figure = document.createElement("figure");
+    figure.className = "photo-card";
+    figure.style.setProperty("--tilt", i % 2 ? "-1deg" : "1deg");
+    figure.style.animationDelay = `${i * 100}ms`;
 
-      analyser.getByteTimeDomainData(timeData);
-      analyser.getByteFrequencyData(freqData);
+    const img = document.createElement("img");
+    img.src = `foto${i}.jpg`;
+    img.alt = `Kenangan ${i}`;
+    img.loading = "lazy";
 
-      let squares = 0;
+    const caption = document.createElement("figcaption");
+    caption.textContent = captions[i - 1];
 
-      for (let i = 0; i < timeData.length; i++) {
-        const v = (timeData[i] - 128) / 128;
-        squares += v * v;
+    img.addEventListener("load", () => {
+      if (img.naturalWidth > 0) {
+        figure.append(img, caption);
+        grid.appendChild(figure);
       }
+    }, {once:true});
 
-      const rms = Math.sqrt(squares / timeData.length);
-
-      let highSum = 0, highN = 0;
-      let lowSum = 0, lowN = 0;
-
-      for (let i = 1; i < freqData.length; i++) {
-        const hz = i * binWidth;
-        const value = freqData[i] / 255;
-
-        if (hz >= 1500 && hz <= 7000) {
-          highSum += value;
-          highN++;
-        }
-
-        if (hz >= 150 && hz <= 1000) {
-          lowSum += value;
-          lowN++;
-        }
-      }
-
-      const high = highN ? highSum / highN : 0;
-      const low = lowN ? lowSum / lowN : 0;
-
-      if (baselineSamples < 45) {
-        baselineTotal += rms;
-        baselineSamples++;
-      }
-
-      const noise = baselineSamples
-        ? baselineTotal / baselineSamples
-        : .01;
-
-      const loud = rms > Math.max(.055, noise * 2.7);
-      const airy = high > Math.max(.055, low * .72);
-
-      if (loud && airy) {
-        if (!blowStarted) blowStarted = performance.now();
-
-        if (performance.now() - blowStarted > 260) {
-          extinguishCandles();
-          return;
-        }
-      } else {
-        blowStarted = 0;
-      }
-
-      raf = requestAnimationFrame(inspect);
-    }
-
-    raf = requestAnimationFrame(inspect);
+    img.addEventListener("error", () => {
+      figure.remove();
+    }, {once:true});
   }
-
-  function extinguishCandles() {
-    if (blown) return;
-    blown = true;
-
-    if (raf) cancelAnimationFrame(raf);
-
-    document.querySelectorAll(".flame").forEach(el => {
-      el.classList.add("off");
-    });
-
-    document.querySelectorAll(".smoke").forEach(el => {
-      el.classList.remove("show");
-      void el.offsetWidth;
-      el.classList.add("show");
-    });
-
-    blowStatus.innerHTML =
-      'Semoga semua harapan baikmu menjadi nyata. <strong>Selamat ulang tahun, Luluk. ♡</strong>';
-
-    micLabel.textContent = "A wish made";
-
-    launchConfetti();
-
-    if (micStream) {
-      micStream.getTracks().forEach(track => track.stop());
-      micStream = null;
-    }
-
-    // Transisi menuju halaman kenangan.
-    setTimeout(() => {
-      pageOne.style.display = "none";
-      pageOne.classList.remove("active");
-
-      pageTwo.classList.add("active");
-      window.scrollTo(0, 0);
-
-      // Pastikan galeri sesuai dengan foto yang berhasil dimuat.
-      arrangeGallery();
-      updateCoverPhoto();
-    }, 1800);
-  }
-
-  function launchConfetti() {
-    const container = $("#confetti");
-    const palette = ["#b69a68", "#d7c5a0", "#78836b", "#fffdf8"];
-
-    for (let i = 0; i < 75; i++) {
-      const piece = document.createElement("i");
-      piece.className = "confetti-piece";
-      piece.style.left = Math.random() * 100 + "%";
-      piece.style.background = palette[i % palette.length];
-      piece.style.animationDelay = Math.random() * .8 + "s";
-      piece.style.animationDuration = (2.5 + Math.random() * 2) + "s";
-      piece.style.setProperty("--drift", (Math.random() * 180 - 90) + "px");
-
-      if (Math.random() > .5) piece.style.borderRadius = "50%";
-
-      container.appendChild(piece);
-      setTimeout(() => piece.remove(), 6000);
-    }
-  }
-
-  musicBtn.addEventListener("click", async () => {
-    if (music.paused) {
-      try {
-        await music.play();
-        musicLabel.textContent = "Musik aktif";
-      } catch {
-        musicLabel.textContent = "Gagal memutar";
-      }
-    } else {
-      music.pause();
-      musicLabel.textContent = "Musik dijeda";
-    }
-  });
-
-  music.addEventListener("error", () => {
-    musicLabel.textContent = "Musik tidak ditemukan";
-  });
-
-  openBtn.addEventListener("click", openInvitation);
-})();
+}
 </script>
 </body>
 </html>
